@@ -4,7 +4,7 @@ import Header from "./Header";
 
 const Page =()=>{
     return(
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col m-0 p-0">
             <div>
             <Header/>
             </div>

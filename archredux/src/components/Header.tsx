@@ -3,8 +3,8 @@ import Nav from "./Nav";
 const Header =()=>{
     return(
         <>
-        <section className="fixed z-50 border w-full">
-                <header className="flex flex-row">
+        <section className="fixed  right-0 px-[20px] w-full bg-white items-center border-b-[2px]  h-[100px] z-1 bg-[red] mt-0">
+                <header className="flex flex-row items-center h-full">
                     <article className="flex w-full">
                         <div className="flex flex-col">
                                     <div className="flex flex-col mix-blend-difference text-[white]"> 
