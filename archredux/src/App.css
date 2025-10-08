@@ -19,3 +19,17 @@ body {
     -webkit-background-clip: text; /* For webkit browsers (Chrome, Safari) */
     background-clip: text; 
 }
+
+@keyframes scroll-x{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll-x {
+    animation: scroll-x 30s linear infinite;
+    width: max-content;
+}
