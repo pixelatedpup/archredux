@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Nav from "./Nav";
 
 interface HeaderProps {
@@ -7,7 +8,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ location = "" }) => {
   const [scrolled, setScrolled] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 400); // adjust threshold as needed
@@ -24,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ location = "" }) => {
     >
       <header className="flex flex-row items-center h-full px-[20px]">
         <article className="flex w-full">
-          <div className="flex flex-col">
+          <div className="flex flex-col cursor-pointer" onClick={()=>navigate("/")}>
             <div className="text-[24px] flex justify-center">Arch</div>
             <div className="text-[36px] flex justify-center p-0 mt-[-14px]">
               Arcades

@@ -2,6 +2,10 @@ import Carousel from "../Carousel";
 import { useEffect, useState } from "react";
 import Card from "../Card";
 import BackgroundVideo from "../BackgroundVideo";
+import { favs } from "../../assets/favs";
+import { reviews } from "../../assets/reviews";
+import { events } from "../../assets/events";
+import { bgImages } from "../../assets/bgImgages";
 
 
 const Home = () => {
@@ -9,50 +13,6 @@ const Home = () => {
     const[resetTrigger, setResetTrigger] = useState(false);
     const[backgroundIndex, setBackgroundIndex] = useState(0);
 
-
-    const favs = [{id:0 , title: "Star Wars", genre: ["Action"], desc: "" , img:"https://res.cloudinary.com/dhlboslsy/image/upload/v1759943643/empirearcade-1657477249068.png_wjlpbh.webp"},
-                  {id:1 , title: "Doom", genre: ["Action"], desc: "" , img: "https://res.cloudinary.com/dhlboslsy/image/upload/v1759943643/Doom.png_fk0fzv.webp"},
-                  {id:2 , title: "Wizard Fire", genre: ["Action"], desc: "", img:"https://res.cloudinary.com/dhlboslsy/image/upload/v1759943643/wizardfire.png_ggz8as.jpg" } ,
-                  {id:3 , title: "Gun Force II", genre: ["Action"], desc: "" ,img:"https://res.cloudinary.com/dhlboslsy/image/upload/v1759943646/gunforce_tja2qn.png"}  ];
-
-    const reviews =[{id:0, name:"James Madden", message:"Lovely time with the fam!", rating:4},
-                    {id:1, name:"Kath Maddy", message:"Lovely time with the fam!", rating:5},
-                    {id:2, name:"Lauren Hall", message:"Lovely time with the fam!", rating:4.5},
-                    {id:3, name:"Jeniffer Sunders", message:"Lovely time with the fam!", rating:5},
-                    {id:4, name:"Jaq Maques", message:"Lovely time with the fam!", rating:5}
-    ]
-    const events = [{id:0 , 
-                    title:"Bowling Tournament", 
-                    desc:"The gloves are off and the pins are set! It's time for the ultimate five-person showdown on the lanes. Forget friendly rivalry; this is about bragging rights and achieving that elusive perfect game. ", 
-                    img:"https://res.cloudinary.com/dhlboslsy/image/upload/v1759945635/bowling1_cmydig.jpg",
-                    max: 8},
-
-                    {id:1 , 
-                        title:"Laser Tag", 
-                        desc:"The gloves are off and the pins are set! It's time for the ultimate five-person showdown on the lanes. Forget friendly rivalry; this is about bragging rights and achieving that elusive perfect game. ", 
-                        img:"https://res.cloudinary.com/dhlboslsy/image/upload/v1759945684/Cinema_Photo_cottonbro_studio_pexels_bdrgxr.jpg",
-                        max: 5},
-
-                    {id:2 , 
-                        title:"Smash Bros Tournament", 
-                        desc:"The gloves are off and the pins are set! It's time for the ultimate five-person showdown on the lanes. Forget friendly rivalry; this is about bragging rights and achieving that elusive perfect game. ", 
-                        img:"",
-                        max: 5},
-
-
-                    {id:3 , 
-                        title:"Birthday Celebration", 
-                        desc:"The gloves are off and the pins are set! It's time for the ultimate five-person showdown on the lanes. Forget friendly rivalry; this is about bragging rights and achieving that elusive perfect game. ", 
-                        img:"",
-                        max:30}
-    ]
-
-    const bgImages =[{id:0, title:"Basketball", video:"https://res.cloudinary.com/dhlboslsy/video/upload/v1759859771/arcade_8_ayjo91.mp4", alt:""},
-                {id:1, title:"", video:"https://res.cloudinary.com/dhlboslsy/video/upload/v1759956940/arcade6_barnnq.mp4", alt:""},
-                {id:2, title:"", video:"https://res.cloudinary.com/dhlboslsy/video/upload/v1759956929/ardae2_apxjsn.mp4", alt:""},
-                {id:3, title:"", video:"https://res.cloudinary.com/dhlboslsy/video/upload/v1759956870/arcade_9_pwq5qh.mp4", alt:""},
-                {id:4, title:"", video:"https://res.cloudinary.com/dhlboslsy/video/upload/v1759956947/arcade7_iuouwi.mp4", alt:""}
-    ]
         useEffect(()=>{
         const interval = setInterval(()=>{
             setSeletedEvent((prev)=>(prev+1)%events.length)
