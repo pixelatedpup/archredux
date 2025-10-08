@@ -10,7 +10,7 @@ const Body =()=>{
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/games" element={<Games/>}/>
-            <Route path="/event" element={<Events/>}/>
+            <Route path="/events" element={<Events/>}/>
             <Route path="/scores" element={<Scores/>}/>
         </Routes>
         </div>

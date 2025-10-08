@@ -1,8 +1,8 @@
 const Carousel = () =>{ 
     return(
         <div className="flex border border-[#E600FF]
-                         w-[674px] h-[480px]">
-            <img className="object-cover/"></img>
+                        w-[500px] h-[400px] bg-[var(--primary)] rounded-2xl">
+            <img className="w-full h-full object-cover"></img>
         </div>
     );
 }

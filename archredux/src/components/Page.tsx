@@ -1,12 +1,14 @@
 import Body from "./Body";
 import Footer from "./Footer";
 import Header from "./Header";
+import { useLocation } from "react-router-dom";
 
 const Page =()=>{
+    const location = useLocation();
     return(
         <div className="min-h-screen flex flex-col m-0 p-0 w-full relative">
             <div>
-            <Header/>
+            <Header location={location.pathname}/>
             </div>
             <div className="flex flex-grow">
                 <Body/>
