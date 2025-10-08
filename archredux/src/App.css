@@ -3,8 +3,18 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    background-color: black;
 }
 
 #root {
     min-height: 100vh;
+}
+
+
+.text-knockout {
+    /* Make the text transparent */
+    color: transparent;
+    /* Use the background of the element to "clip" the foreground text */
+    -webkit-background-clip: text; /* For webkit browsers (Chrome, Safari) */
+    background-clip: text; 
 }
