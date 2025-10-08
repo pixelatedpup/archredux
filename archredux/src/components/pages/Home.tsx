@@ -16,12 +16,12 @@ const Home = () => {
     const events = [{id:0 , 
                     title:"Bowling Tournament", 
                     desc:"The gloves are off and the pins are set! It's time for the ultimate five-person showdown on the lanes. Forget friendly rivalry; this is about bragging rights and achieving that elusive perfect game. ", 
-                    img:""},
+                    img:"https://res.cloudinary.com/dhlboslsy/image/upload/v1759945635/bowling1_cmydig.jpg"},
 
                     {id:1 , 
                         title:"Laser Tag", 
                         desc:"The gloves are off and the pins are set! It's time for the ultimate five-person showdown on the lanes. Forget friendly rivalry; this is about bragging rights and achieving that elusive perfect game. ", 
-                        img:""},
+                        img:"https://res.cloudinary.com/dhlboslsy/image/upload/v1759945684/Cinema_Photo_cottonbro_studio_pexels_bdrgxr.jpg"},
 
                     {id:2 , 
                         title:"Smash Bros Tournament", 
@@ -37,7 +37,7 @@ const Home = () => {
         useEffect(()=>{
         const interval = setInterval(()=>{
             setSeletedEvent((prev)=>(prev+1)%events.length)
-        }, 900)
+        }, 5000)
         return() => clearInterval(interval);
     },[events.length, resetTrigger])
 
@@ -48,7 +48,7 @@ const Home = () => {
     <>
     <div className=" flex flex-col w-full ">
             <section className="flex w-full h-[800px]">
-                <div className="flex flex-col flex-1 border inset-0 absolute w-full h-[800px] z-[-10]">
+                <div className="flex flex-col flex-1  inset-0 absolute w-full h-[800px] z-[-10]">
                         
                         <video className="w-full h-full object-cover"
                                         autoPlay
@@ -64,15 +64,15 @@ const Home = () => {
             {/* Events section */}
             
             <section className="relative mt-[50px] w-full">
-                <div className="flex flex-1  border  gap-2 p-[50px]">
-                    <article className="flex flex-col justify-start w-full border border-[orange]">
+                <div className="flex flex-1   gap-2 p-[50px]">
+                    <article className="flex flex-col items-center w-full ">
                         <div>
-                            <Carousel/>
+                            <Carousel img={events[selectedEvent].img}/>
                         </div>
 
                     </article>
-                    <article className="flex justify-end w-full border border-[blue]">
-                        <div className="flex flex-col rounded-2xl border border-[white] bg-[white] h-[340px] w-[580px]">
+                    <article className="flex justify-center w-full ">
+                        <div className="flex flex-col justify-center rounded-2xl border border-[white] bg-[white] h-[340px] w-[580px]">
                             
                             <div className="bg-[var(--primary)] p-[10px] rounded-t-2xl">
                                 <p className="text-[white] text-[36px] w-full text-center">{events[selectedEvent].title}</p>
