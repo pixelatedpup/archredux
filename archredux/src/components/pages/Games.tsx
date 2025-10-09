@@ -29,7 +29,7 @@ const Games = () => {
 
 
       {/* Game cards carousel */}
-      <section {...swipeHandlers} className="flex w-full h-full justify-center items-center mt-6 ">
+      <section {...swipeHandlers} className="flex w-full h-full justify-center items-center mt-6 cursor-pointer">
         <article className="flex flex-row gap-10 items-center">
           {visibleCards.map((index) => (
             <div
@@ -56,7 +56,7 @@ const Games = () => {
       </section>
 
       {/* Scrollable title list */}
-      <section {...swipeHandlers} className="flex flex-col w-full justify-center items-center h-full overflow-y-auto r">
+      <section {...swipeHandlers} className="cursor-pointer flex flex-col w-full justify-center items-center h-full overflow-y-auto r">
         <article className="flex flex-col items-center gap-2 h-[300px]">
           {favs.map((fav, index) => (
             <div
