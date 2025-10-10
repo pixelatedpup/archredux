@@ -29,14 +29,14 @@ const Games = () => {
 
 
       {/* Game cards carousel */}
-      <section {...swipeHandlers} className="flex w-full h-full justify-center items-center mt-6 cursor-pointer">
-        <article className="flex flex-row gap-10 items-center">
+      <section {...swipeHandlers} className="flex w-full h-full justify-center items-center mt-6 cursor-pointer ">
+        <article className="flex flex-row gap-10 items-center w-full justify-center ">
           {visibleCards.map((index) => (
             <div
               key={index}
               className={`cursor-pointer transition-transform duration-500 ${
                 index === selectedCard
-                  ? "flex flex-row bg-black w-[669px] h-[397px] p-[38px] rounded-2xl justify-center  relative scale-110  "
+                  ? "flex flex-row bg-black w-[669px] h-[430px] p-[38px] rounded-2xl justify-center  relative scale-110  "
                   : "opacity-70"
               }`}
               onClick={() => handleSelect(index)}
@@ -49,8 +49,13 @@ const Games = () => {
                 </div>
                 <div className="flex flex-col items-center w-full ">
                     <h2 className="text-[var(--primary)] text-[28px]">{favs[index].title}</h2>
-                    <p className="text-white">{favs[index].desc}</p>
-                    {index === selectedCard && <p className="text-white bg-[var(--primary)] p-[6px] rounded-2xl text-[12px]">{favs[index].genre}</p>}
+                    
+                    {index === selectedCard && 
+                    <div className="flex flex-col gap-5 items-center justify-center ">
+                    <p className="text-white w-full text-[14px]">{favs[index].desc}</p> 
+                    <p className="text-white bg-[var(--primary)] p-[6px] rounded-2xl text-[12px] w-[80px] h-[30px] text-center">{favs[index].genre}</p>
+                    </div>
+                    }
                 </div>
             </div>
           ))}

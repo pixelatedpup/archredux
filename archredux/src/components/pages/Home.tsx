@@ -108,7 +108,7 @@ const Home = () => {
                         <div key={review.name} className="flex flex-col  w-[318px]">
                             <Card img = {review.img}custom="h-[441px] w-[318px] border border-[var(--primary)]"/>
                             <div className="flex w-full justify-center w-full h-full p-[30px]">
-                                <div className="absolute relative bottom-[150px] mb-0
+                                <div className="absolute relative bottom-[150px] 
                                                 flex flex-col items-center justify-center 
                                                 p-[35px] w-[250px] h-[250px] 
                                                 rounded-full border border-[var(--primary)] bg-[var(--primary)]
