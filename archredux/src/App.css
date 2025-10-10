@@ -29,7 +29,55 @@ body {
     }
 }
 
+@keyframes expandIcon{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
 .animate-scroll-x {
     animation: scroll-x 30s linear infinite;
     width: max-content;
+}
+
+
+/* Expands width then height after 0.2s */
+@keyframes expandWidth {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes expandHeight {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+/* Combined animation: width first, then height after 200ms */
+.expand-sequential {
+  /* Start from the center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center;
+  margin: 0 auto;
+
+  /* Start small */
+  width: 0%;
+  height: 0%;
+
+  /* First expand width */
+  animation:
+    expandWidth 0.5s ease-out forwards,
+    expandHeight 0.5s ease-out 0.2s forwards; /* starts 200ms later */
 }

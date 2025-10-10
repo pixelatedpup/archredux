@@ -43,7 +43,9 @@ const Games = () => {
             >
 
                 <div className="w-full flex flex-col items-start">
+                  <div className="expand-sequential">
                     <Card img={favs[index].img} />
+                  </div>
                 </div>
                 <div className="flex flex-col items-center w-full ">
                     <h2 className="text-[var(--primary)] text-[28px]">{favs[index].title}</h2>

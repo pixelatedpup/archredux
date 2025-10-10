@@ -43,8 +43,19 @@ const Home = () => {
             <section className="relative mt-[50px] w-full">
                 <div className="flex flex-1   gap-2 p-[50px]">
                     <article className="flex flex-col items-center w-full ">
-                        <div>
+                        <div className="flex flex-col gap-5">
                             <Carousel img={events[selectedEvent].img}/>
+                            <div className="flex gap-3 w-full justify-center">
+                                {favs.map((fav, index)=>(
+                                    <>
+                                    <div key ={index}
+
+                                        onClick={()=>setSeletedEvent(index)}
+                                        className={`${index === selectedEvent ? "bg-[var(--primary)]" : "bg-white"} w-[20px] h-[20px] cursor-pointer`}></div>
+                                    </>
+                                ))}
+                                
+                            </div>
                         </div>
 
                     </article>
