@@ -81,7 +81,7 @@ const Home = () => {
             </section>
 
             {/* Games section */}
-            <section className="relative flex flex-col overflow-hidden mt-[100px] w-full h-[789px] px-4 ">
+            <section className="relative flex flex-col overflow-hidden mt-[100px] w-full h-[789px] px-10 ">
             <div className="text-[white] text-[48px] mb-8">
                 Play some of our fan favourites
             </div>
@@ -101,19 +101,29 @@ const Home = () => {
 
 
             {/* Reviews section */}
-                        <section className="w-full relative mt-[100px]">
+                        <section className="w-full relative mt-[100px] px-10">
                 <div className="text-[white] text-[48px]">Check out our reviews</div>
-                <div className="flex h-[600px]  gap-[120px] overflow-x-auto max-w-[100vw]">
-                    {reviews.map(()=>(
-                        <div className="flex flex-col h-[560px] w-[318px]">
-                            <Card custom="h-[441px] w-[318px] border border-[var(--primary)]"/>
-                            <div className="w-[240px] h-[240px] rounded-full border border-[var(--primary)]"></div>
+                <div className="flex h-full gap-[120px] overflow-x-auto max-w-[100vw] p-[30px]">
+                    {reviews.map((review,index)=>(
+                        <div key={review.name} className="flex flex-col  w-[318px]">
+                            <Card img = {review.img}custom="h-[441px] w-[318px] border border-[var(--primary)]"/>
+                            <div className="flex w-full justify-center w-full h-full p-[30px]">
+                                <div className="absolute relative bottom-[150px] mb-0
+                                                flex flex-col items-center justify-center 
+                                                p-[35px] w-[250px] h-[250px] 
+                                                rounded-full border border-[var(--primary)] bg-[var(--primary)]
+                                                ">
+                                    <h2 className="text-[24px] text-white font-bold">{review.name}</h2>
+                                    <p>{review.message}</p>
+                                    <h3 className="text-[24px] text-[var(--light)]">{review.rating}/5</h3>
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
             </section>
             {/* Scores section */}
-                <section>
+                <section className="w-full relative mt-[100px] px-10">
                     <div className="text-[white] text-[48px]">Go head to head with some of the best</div>
                     <div className="h-[600px] w-full border border-[white]"></div>
                 </section>
