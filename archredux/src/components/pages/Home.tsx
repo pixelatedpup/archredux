@@ -6,6 +6,8 @@ import { favs } from "../../assets/favs";
 import { reviews } from "../../assets/reviews";
 import { events } from "../../assets/events";
 import { bgImages } from "../../assets/bgImgages";
+import Nav from "../Nav";
+import Header from "../Header";
 
 
 const Home = () => {
@@ -33,9 +35,25 @@ const Home = () => {
             <section className="flex w-full h-[800px]">
                 <div className="flex flex-col flex-1  inset-0 absolute w-full h-[800px] z-[-10]">
                         
-                        <BackgroundVideo videos={bgImages} intervalTime={4000}/>
-                        <p className="absolute mix-blend-difference border w-full h-full flex justify-center items-center z-[10]">Hello World</p>
+
+  {/* Background video */}
+                <BackgroundVideo videos={bgImages} intervalTime={4000} />
+
+                {/* Header inside the same stacking context */}
+                {/* <header className="absolute top-0 left-0 w-full h-[100px] flex items-center justify-between px-[20px] mix-blend-difference text-white z-10">
+                    <div className="cursor-pointer">
+                    <div className="text-[24px] flex justify-center">Arch</div>
+                    <div className="text-[36px] flex justify-center p-0 mt-[-14px]">
+                        Arcades
+                    </div>
+                    </div>
+                    <Nav />
+                </header> */}
+                
+
+
                 </div>
+                <Header location="/"/>
             </section>
             <div className="bg-[black]">
             {/* Events section */}

@@ -19,13 +19,23 @@ const Header: React.FC<HeaderProps> = ({ location = "" }) => {
 
   return (
     <section
-      className={`fixed right-0 w-full h-[100px] z-50 transition-colors duration-500 ${
-        scrolled && location=="/" ? "bg-white text-black shadow-md" : "bg-transparent  "
+      className={`fixed top-0 left-0 w-full h-[100px] transition-all duration-500 ${
+        scrolled && location == "/"
+          ? "bg-white text-black shadow-md"
+          : scrolled
+          ? "bg-white text-black shadow-md"
+          : location == "/"
+          ? "bg-transparent mix-blend-difference text-white"
+          : "bg-white text-black shadow-md"
       }`}
+      style={{ zIndex: 10 }}
     >
       <header className="flex flex-row items-center h-full px-[20px]">
         <article className="flex w-full">
-          <div className="flex flex-col cursor-pointer" onClick={()=>navigate("/")}>
+          <div
+            className="flex flex-col cursor-pointer"
+            onClick={() => navigate("/")}
+          >
             <div className="text-[24px] flex justify-center">Arch</div>
             <div className="text-[36px] flex justify-center p-0 mt-[-14px]">
               Arcades
@@ -39,6 +49,7 @@ const Header: React.FC<HeaderProps> = ({ location = "" }) => {
         </article>
       </header>
     </section>
+
   );
 };
 

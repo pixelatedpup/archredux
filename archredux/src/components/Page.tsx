@@ -8,7 +8,7 @@ const Page =()=>{
     return(
         <div className="min-h-screen flex flex-col m-0 p-0 w-full relative">
             <div>
-            <Header location={location.pathname}/>
+            {location.pathname!= "/" && (<Header location={location.pathname}/> )}
             </div>
             <div className="flex flex-grow">
                 <Body/>
