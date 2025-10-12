@@ -33,7 +33,7 @@ const Events =()=>{
                     <h1 className="text-[48px]">Our Events</h1>
                 </article>
                 {events.map((event, index) => (
-                    <div key={event.title} onMouseEnter={()=>handleHover(event.title)} onMouseLeave={()=>handleHover(null)} className={`flex w-full bg-black h-[228px] hover:h-[270px] transition-all duration-[300ms] ${index%2 === 1 ? 'flex-row' :'flex-row-reverse'}`}>
+                    <div key={event.title} onMouseEnter={()=>handleHover(event.title)} onMouseLeave={()=>handleHover(null)} className={`flex w-full bg-black h-[310px] hover:h-[340px] transition-all duration-[300ms] ${index%2 === 1 ? 'flex-row' :'flex-row-reverse'}`}>
                         <div>
                         <Card custom="w-[1087px] h-full transition-all duration-[300ms] " img={event.img} gray={hover && onHover !== event.title}/>
                         </div>

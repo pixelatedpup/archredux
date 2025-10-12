@@ -77,20 +77,20 @@ const Home = () => {
                         </div>
 
                     </article>
-                    <article className="flex justify-center w-full ">
-                        <div className="flex flex-col justify-center rounded-2xl bg-[white] h-[390px] w-[580px]">
+                    <article className="flex justify-start w-full ">
+                        <div className="flex flex-col justify-center rounded-2xl bg-[white] h-[500px] w-[780px]">
                             
                             <div className="bg-[var(--primary)] p-[10px] rounded-t-2xl">
-                                <p className="text-[white] text-[36px] w-full text-center">{events[selectedEvent].title}</p>
+                                <h2 className="text-[white] text-[36px] w-full text-center">{events[selectedEvent].title}</h2>
                             </div>
                             
                             <div className="h-full p-[10px]">
-                                <p className="text-[black] text-[22px] p-[20px]">{events[selectedEvent].desc}</p>
+                                <p className="text-[black] text-[22px] p-[20px] px-[50px]">{events[selectedEvent].desc}</p>
                             </div>
 
-                            <div className="flex justify-center gap-7 w-full h-full  p-[20px]">
-                                <div className="bg-[var(--primary)] text-white p-[10px] rounded-xl">Max: {events[selectedEvent].max}</div>
-                                <button className="bg-black text-white p-[10px] rounded-2xl w-[200px] ">Book Now</button>
+                            <div className="flex  items-center justify-center gap-7 w-full h-full  p-[20px]">
+                                <div className="bg-[var(--primary)] text-white p-[10px] rounded-xl h-[40px]">Max: {events[selectedEvent].max}</div>
+                                <button className="bg-black text-white p-[10px] rounded-2xl w-[200px] h-[50px] ">Book Now</button>
                             </div>
 
                         </div>
@@ -101,7 +101,7 @@ const Home = () => {
             {/* Games section */}
             <section className="relative flex flex-col overflow-hidden mt-[100px] w-full h-[789px] px-10 ">
             <div className="text-[white] text-[48px] mb-8">
-                Play some of our fan favourites
+                <h1>Play some of our fan favourites</h1>
             </div>
 
             {/* Scrollable container */}
@@ -109,7 +109,7 @@ const Home = () => {
                 {[...favs,...favs].map((fav, index) => (
                 <div key={fav.id} className={`flex h-full ${index % 2 === 1? "justify-start flex-col-reverse" : "flex-col justify-start "} h-full`} >
                     <Card custom="w-[390px] h-[390px] border border-[var(--primary)]"img={fav.img}/>
-                    <div className="flex justify-center text-[var(--primary)] text-[36px] w-full ">{fav.title}</div>
+                    <div className="flex justify-center text-[var(--primary)] text-[36px] w-full "><h2>{fav.title}</h2></div>
                 </div>
                 ))}
             </div>
@@ -120,7 +120,7 @@ const Home = () => {
 
             {/* Reviews section */}
                         <section className="w-full relative mt-[100px] px-10">
-                <div className="text-[white] text-[48px]">Check out our reviews</div>
+                <div className="text-[white] text-[48px]"><h2>Check out our reviews</h2></div>
                 <div className="flex h-full gap-[120px] overflow-x-auto max-w-[100vw] p-[30px]">
                     {reviews.map((review,index)=>(
                         <div key={review.name} className="flex flex-col  w-[318px]">
@@ -142,7 +142,9 @@ const Home = () => {
             </section>
             {/* Scores section */}
                 <section className="w-full relative mt-[100px] px-10">
-                    <div className="text-[white] text-[48px]">Go head to head with some of the best</div>
+                    <div className="text-[white] text-[48px]">
+                        <h2>Go head to head with some of the best</h2
+                    ></div>
                     <div className="h-[600px] w-full border border-[white]"></div>
                 </section>
                 </div>
