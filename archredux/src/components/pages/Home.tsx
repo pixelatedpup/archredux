@@ -124,16 +124,16 @@ const Home = () => {
                 <div className="flex h-full gap-[120px] overflow-x-auto max-w-[100vw] p-[30px]">
                     {reviews.map((review,index)=>(
                         <div key={review.name} className="flex flex-col  w-[318px]">
-                            <Card img = {review.img}custom="h-[441px] w-[318px] border border-[var(--primary)]"/>
+                            <Card img = {review.img}custom="h-[441px] w-[318px] border border-[var(--primary)]" gray={true}/>
                             <div className="flex w-full justify-center w-full h-full p-[30px]">
                                 <div className="absolute relative bottom-[150px] 
                                                 flex flex-col items-center justify-center 
                                                 p-[35px] w-[250px] h-[250px] 
-                                                rounded-full border border-[var(--primary)] bg-[var(--primary)]
+                                                rounded-full border border-[var(--primary)] bg-[white]
                                                 ">
-                                    <h2 className="text-[24px] text-white font-bold">{review.name}</h2>
+                                    <h2 className="text-[24px] text-[var(--primary)] font-bold">{review.name}</h2>
                                     <p>{review.message}</p>
-                                    <h3 className="text-[24px] text-[var(--light)]">{review.rating}/5</h3>
+                                    <h3 className="text-[24px] text-[var(--primary)]">{review.rating}/5</h3>
                                 </div>
                             </div>
                         </div>

@@ -2,9 +2,10 @@ interface CardProps {
   custom?: string;
   rounded?: boolean;
   img?: string;
+  gray?:boolean
 }
 
-const Card = ({ custom = "", rounded = false, img = "" }: CardProps) => {
+const Card = ({ custom = "", rounded = false, img = "" , gray=false}: CardProps) => {
   return (
     <div
       className={`${
@@ -14,7 +15,7 @@ const Card = ({ custom = "", rounded = false, img = "" }: CardProps) => {
       } ${rounded ? "rounded-[16px]" : ""}`}
     >
       <img
-        className="w-full h-full object-cover"
+        className={`w-full h-full object-cover ${gray? 'grayscale' : ""}`}
         src={img || "https://via.placeholder.com/250"}
         alt=""
       />
