@@ -37,7 +37,14 @@ const Home = () => {
                         
 
   {/* Background video */}
-                <BackgroundVideo videos={bgImages} intervalTime={4000} />
+                      <video
+                        src={`https://res.cloudinary.com/dhlboslsy/video/upload/v1760392647/BANNER-2_idy2bg.mp4`}
+                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000`}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
 
                 {/* Header inside the same stacking context */}
                 {/* <header className="absolute top-0 left-0 w-full h-[100px] flex items-center justify-between px-[20px] mix-blend-difference text-white z-10">
@@ -78,14 +85,14 @@ const Home = () => {
 
                     </article>
                     <article className="flex justify-start w-full ">
-                        <div className="flex flex-col justify-center rounded-2xl bg-[white] h-[500px] w-[780px]">
+                        <div className="flex flex-col justify-center rounded-2xl bg-[white] h-[560px] w-[650px]">
                             
                             <div className="bg-[var(--primary)] p-[10px] rounded-t-2xl">
-                                <h2 className="text-[white] text-[36px] w-full text-center">{events[selectedEvent].title}</h2>
+                                <h2 className="text-[white] text-[36px] p-[20px] px-[50px] py-[30px] w-full text-left ">{events[selectedEvent].title}</h2>
                             </div>
                             
-                            <div className="h-full p-[10px]">
-                                <p className="text-[black] text-[22px] p-[20px] px-[50px]">{events[selectedEvent].desc}</p>
+                            <div className="h-full p-[10px] w-full">
+                                <p className="text-[black] text-[22px] p-[20px] px-[30px] w-[600px] text-left">{events[selectedEvent].desc}</p>
                             </div>
 
                             <div className="flex  items-center justify-center gap-7 w-full h-full  p-[20px]">

@@ -28,13 +28,13 @@ const Events =()=>{
     }
     return(
         <>
-            <section className="flex flex-col gap-7 items-center mt-[120px] w-full p-[50px]">
+            <section className="flex flex-col gap-7 items-center mt-[75px] w-full p-[50px]">
                 <article className="flex w-full justify-end ">
                     <h1 className="text-[48px]">Our Events</h1>
                 </article>
                 {events.map((event, index) => (
                     <div key={event.title} onMouseEnter={()=>handleHover(event.title)} onMouseLeave={()=>handleHover(null)} className={`flex w-full bg-black h-[310px] hover:h-[340px] transition-all duration-[300ms] ${index%2 === 1 ? 'flex-row' :'flex-row-reverse'}`}>
-                        <div>
+                        <div className="flex-1">
                         <Card custom="w-[1087px] h-full transition-all duration-[300ms] " img={event.img} gray={hover && onHover !== event.title}/>
                         </div>
                         <div className="flex flex-col p-[30px] gap-2">
