@@ -1,34 +1,31 @@
 import Carousel from "../Carousel";
 import { useEffect, useState } from "react";
 import Card from "../Card";
-import BackgroundVideo from "../BackgroundVideo";
 import { favs } from "../../assets/favs";
 import { reviews } from "../../assets/reviews";
 import { events } from "../../assets/events";
-import { bgImages } from "../../assets/bgImgages";
-import Nav from "../Nav";
 import Header from "../Header";
 
 
 const Home = () => {
     const[selectedEvent, setSeletedEvent] = useState(0);
-    const[resetTrigger, setResetTrigger] = useState(false);
-    const[backgroundIndex, setBackgroundIndex] = useState(0);
+    // const[resetTrigger, setResetTrigger] = useState(false);
+    // const[backgroundIndex, setBackgroundIndex] = useState(0);
 
         useEffect(()=>{
         const interval = setInterval(()=>{
             setSeletedEvent((prev)=>(prev+1)%events.length)
         }, 5000)
         return() => clearInterval(interval);
-    },[events.length, resetTrigger])
+    },[events.length])
 
 
 
 
-    useEffect(()=>{
-        console.log("Selected event", selectedEvent)
-        console.log("Selected background", backgroundIndex);
-    },[selectedEvent])
+    // useEffect(()=>{
+    //     console.log("Selected event", selectedEvent)
+    //     console.log("Selected background", backgroundIndex);
+    // },[selectedEvent])
   return (
     <>
     <div className=" flex flex-col w-full ">
@@ -73,7 +70,7 @@ const Home = () => {
                             <div className="flex gap-3 w-full justify-center">
                                 {events.map((event, index)=>(
                                     <>
-                                    <div key ={index}
+                                    <div key ={event.title}
 
                                         onClick={()=>setSeletedEvent(index)}
                                         className={`${index === selectedEvent ? "bg-[var(--primary)]" : "bg-white"} w-[20px] h-[20px] cursor-pointer`}></div>
@@ -129,7 +126,7 @@ const Home = () => {
              <section className="w-full relative lg:mt-[100px] mt-[10px] ">
                 <div className="text-[white] text-[48px]"><h2>Check out our reviews</h2></div>
                 <div className="flex h-full gap-[120px] overflow-x-auto max-w-[100vw] ">
-                    {reviews.map((review,index)=>(
+                    {reviews.map((review)=>(
                         <div key={review.name} className="flex flex-col  w-[318px]">
                             <Card img = {review.img}custom="h-[441px] w-[318px]" gray={true}/>
                             <div className="flex w-full justify-center w-full h-full p-[30px]">
