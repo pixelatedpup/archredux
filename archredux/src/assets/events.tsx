@@ -1,6 +1,6 @@
     export const events = [{id:0 , 
                     title:"Bowling Tournament", 
-                    desc:"The gloves are off and the pins are set! It's time for the ultimate five-person showdown on the lanes. Forget friendly rivalry; this is about bragging rights and achieving that elusive perfect game. ", 
+                    desc:"The gloves are off and the pins are set! It's time for the ultimate five-person showdown on the lanes.  ", 
                     img:"https://res.cloudinary.com/dhlboslsy/image/upload/v1759945635/bowling1_cmydig.jpg",
                     max: 8},
 

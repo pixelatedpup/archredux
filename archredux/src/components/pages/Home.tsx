@@ -66,12 +66,12 @@ const Home = () => {
             {/* Events section */}
             
             <section className="relative mt-[50px] w-full">
-                <div className="flex flex-1   gap-2 p-[50px]">
+                <div className="flex flex-1   gap-2 p-[50px] lg:flex-row flex-col lg:gap-2 gap-7">
                     <article className="flex flex-col items-center w-full ">
                         <div className="flex flex-col gap-5">
-                            <Carousel img={events[selectedEvent].img}/>
+                            <Carousel img={events[selectedEvent].img} custom="w-[]"/>
                             <div className="flex gap-3 w-full justify-center">
-                                {favs.map((fav, index)=>(
+                                {events.map((event, index)=>(
                                     <>
                                     <div key ={index}
 
@@ -84,77 +84,70 @@ const Home = () => {
                         </div>
 
                     </article>
-                    <article className="flex justify-start w-full ">
-                        <div className="flex flex-col justify-center rounded-2xl bg-[white] h-[560px] w-[650px]">
+                    <article className="flex w-full lg:justify-start justify-center lg:items-center">
+                        <div className="flex flex-col justify-center  rounded-2xl bg-[white] lg:h-[400px] lg:w-[650px] w-[450px] h-auto">
                             
                             <div className="bg-[var(--primary)] p-[10px] rounded-t-2xl">
-                                <h2 className="text-[white] text-[36px] p-[20px] px-[50px] py-[30px] w-full text-left ">{events[selectedEvent].title}</h2>
+                                <h2 className="text-[white]  lg:p-[20px] lg:px-[50px] lg:py-[30px] p-[10px] w-full text-center ">{events[selectedEvent].title}</h2>
                             </div>
                             
                             <div className="h-full p-[10px] w-full">
-                                <p className="text-[black] text-[22px] p-[20px] px-[30px] w-[600px] text-left">{events[selectedEvent].desc}</p>
+                                <p className="text-[black]  lg:p-[20px] lg:px-[30px] p-[10px] lg:w-[600px] w-auto text-left">{events[selectedEvent].desc}</p>
                             </div>
 
-                            <div className="flex  items-center justify-center gap-7 w-full h-full  p-[20px]">
-                                <div className="bg-[var(--primary)] text-white p-[10px] rounded-xl h-[40px]">Max: {events[selectedEvent].max}</div>
-                                <button className="bg-black text-white p-[10px] rounded-2xl w-[200px] h-[50px] ">Book Now</button>
+                            <div className="flex  items-center justify-center lg:gap-7 gap-3 w-full h-full  p-[20px]">
+                                <div className="flex items-center bg-[var(--primary)] text-white p-[10px] rounded-xl lg:h-[40px] h-[30px]"><h3>Max: {events[selectedEvent].max}</h3></div>
+                                <button className="bg-black text-white p-[10px] rounded-2xl lg:w-[200px] lg:h-[50px] w-[130px] h-[40px]"><h3>Book Now</h3></button>
                             </div>
 
                         </div>
                     </article>
                 </div>
             </section>
-
+            
             {/* Games section */}
-            <section className="relative flex flex-col overflow-hidden mt-[100px] w-full h-[789px] px-10 ">
-            <div className="text-[white] text-[48px] mb-8">
-                <h1>Play some of our fan favourites</h1>
-            </div>
-
-            {/* Scrollable container */}
-            <div className="flex h-full animate-scroll-x gap-[125px] p-2 max-w-[100vw] px-[50px]">
-                {[...favs,...favs].map((fav, index) => (
-                <div key={fav.id} className={`flex h-full ${index % 2 === 1? "justify-start flex-col-reverse" : "flex-col justify-start "} h-full`} >
-                    <Card custom="w-[390px] h-[390px] border border-[var(--primary)]"img={fav.img}/>
-                    <div className="flex justify-center text-[var(--primary)] text-[36px] w-full "><h2>{fav.title}</h2></div>
+            <section className="relative flex flex-col overflow-hidden mt-[100px] h-[789px] px-10 max-w-[100vw] ">
+                <div className="text-[white] text-[48px] mb-8">
+                    <h1>Play some of our fan favourites</h1>
                 </div>
-                ))}
-            </div>
+
+                {/* Scrollable container */}
+                <div className="flex lg:h-[550px] h-[350px] animate-scroll-x lg:gap-[65px] gap-[5px] max-w-[100vw] ">
+                    {[...favs,...favs].map((fav, index) => (
+                    <div key={fav.id} className={`flex h-full ${index % 2 === 1? "justify-start flex-col-reverse" : "flex-col justify-start "}`} >
+                        <Card custom="lg:w-[250px] lg:h-[250px] w-[150px] h-[150px] border border-[var(--primary)]"img={fav.img}/>
+                        <div className="flex justify-center text-[var(--primary)] text-[36px] w-full "><h2>{fav.title}</h2></div>
+                    </div>
+                    ))}
+                </div>
             </section>
 
 
 
 
             {/* Reviews section */}
-                        <section className="w-full relative mt-[100px] px-10">
+             <section className="w-full relative lg:mt-[100px] mt-[10px] ">
                 <div className="text-[white] text-[48px]"><h2>Check out our reviews</h2></div>
-                <div className="flex h-full gap-[120px] overflow-x-auto max-w-[100vw] p-[30px]">
+                <div className="flex h-full gap-[120px] overflow-x-auto max-w-[100vw] ">
                     {reviews.map((review,index)=>(
                         <div key={review.name} className="flex flex-col  w-[318px]">
-                            <Card img = {review.img}custom="h-[441px] w-[318px] border border-[var(--primary)]" gray={true}/>
+                            <Card img = {review.img}custom="h-[441px] w-[318px]" gray={true}/>
                             <div className="flex w-full justify-center w-full h-full p-[30px]">
                                 <div className="absolute relative bottom-[150px] 
                                                 flex flex-col items-center justify-center 
                                                 p-[35px] w-[250px] h-[250px] 
-                                                rounded-full border border-[var(--primary)] bg-[white]
+                                                rounded-full bg-[var(--lightg)]
                                                 ">
-                                    <h2 className="text-[24px] text-[var(--primary)] font-bold">{review.name}</h2>
-                                    <p>{review.message}</p>
-                                    <h3 className="text-[24px] text-[var(--primary)]">{review.rating}/5</h3>
+                                    <h3 className="font-bold text-[var(--darkg)]">{review.name}</h3>
+                                    <p className="text-center">"{review.message}"</p>
+                                    <h3 className="text-[var(--primary)]">{review.rating}/5</h3>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
             </section>
-            {/* Scores section */}
-                <section className="w-full relative mt-[100px] px-10">
-                    <div className="text-[white] text-[48px]">
-                        <h2>Go head to head with some of the best</h2
-                    ></div>
-                    <div className="h-[600px] w-full border border-[white]"></div>
-                </section>
-                </div>
+        </div>
         </div>
     </>
   );

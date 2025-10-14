@@ -28,19 +28,19 @@ const Events =()=>{
     }
     return(
         <>
-            <section className="flex flex-col gap-7 items-center mt-[75px] w-full p-[50px]">
-                <article className="flex w-full justify-end ">
-                    <h1 className="text-[48px]">Our Events</h1>
+            <section className="flex flex-col gap-[95px] items-center mt-[75px] w-full p-[75px]">
+                <article className="flex w-full justify-center ">
+                    <h1>Our Events</h1>
                 </article>
                 {events.map((event, index) => (
-                    <div key={event.title} onMouseEnter={()=>handleHover(event.title)} onMouseLeave={()=>handleHover(null)} className={`flex w-full bg-black h-[310px] hover:h-[340px] transition-all duration-[300ms] ${index%2 === 1 ? 'flex-row' :'flex-row-reverse'}`}>
-                        <div className="flex-1">
-                        <Card custom="w-[1087px] h-full transition-all duration-[300ms] " img={event.img} gray={hover && onHover !== event.title}/>
+                    <div key={event.title} onMouseEnter={()=>handleHover(event.title)} onMouseLeave={()=>handleHover(null)} className={`flex w-full bg-black lg:h-[365px] lg:hover:h-[390px] h-[500px] hover:h-[550px]  transition-all duration-[300ms] ${index%2 === 1 ? 'flex-row' :'flex-row-reverse'}`}>
+                        <div className="flex w-full">
+                        <Card custom=" h-full transition-all duration-[300ms] " img={event.img} gray={hover && onHover !== event.title}/>
                         </div>
-                        <div className="flex flex-col p-[30px] gap-2">
-                            <h2 className="text-[24px] font-bold text-[var(--primary)]">{event.title}</h2>
-                            <p className="text-[white]">{event.desc}</p>
-                            <div className="flex w-full ">
+                        <div className="flex flex-col p-[50px] gap-2 w-full">
+                            <h2 className=" font-bold text-[var(--primary)]">{event.title}</h2>
+                            <h3 className="text-[white] lg:w-[600px]">{event.desc}</h3>
+                            <div className="flex w-full mt-[30px] ">
                                 <div className="flex w-full items-center justify-start">
                                     <p className=" flex items-center bg-white p-[10px] h-[25px]">Max: {event.max}</p>
                                 </div>
