@@ -36,7 +36,7 @@ const Games = () => {
               key={index}
               className={`cursor-pointer transition-transform duration-500 ${
                 index === selectedCard
-                  ? "flex flex-row bg-black lg:w-[669px] lg:h-[430px] w-[350.6px]  h-[320px] p-[38px] rounded-2xl justify-center  relative scale-110  "
+                  ? "flex gap-7 lg:gap-0 flex-row bg-black lg:w-[669px] lg:h-[430px] w-[350.6px]  h-[320px] p-[38px] rounded-2xl justify-center  relative scale-110  "
                   : "opacity-70"
               }`}
               onClick={() => handleSelect(index)}
@@ -44,16 +44,16 @@ const Games = () => {
 
                 <div className="w-full flex flex-col items-start">
                   <div className="expand-sequential">
-                    <Card img={favs[index].img} custom="lg:h-[250px] lg:w-[250px] h-[70px] w-[70px]" />
+                    <Card img={favs[index].img} custom={` ${index === selectedCard?"h-[140px] w-[140px]":"h-[70px] w-[70px]"}  lg:h-[250px] lg:w-[250px]`} />
                   </div>
                 </div>
-                <div className="flex flex-col items-center w-full ">
-                    <h3 className="text-[var(--primary)] text-[28px]">{favs[index].title}</h3>
+                <div className="flex flex-col items-center w-full h-full justify-center">
+                    <h3 className="text-[var(--primary)] lg:text-center text-left w-full">{favs[index].title}</h3>
                     
                     {index === selectedCard && 
                     <div className="flex flex-col gap-5 items-center justify-center ">
-                    <p className="text-white w-full text-[14px]">{favs[index].desc}</p> 
-                    <p className="text-white bg-[var(--primary)] p-[6px] rounded-2xl text-[12px] w-[80px] h-[30px] text-center">{favs[index].genre}</p>
+                    <p className="text-white w-full ">{favs[index].desc}</p> 
+                    <p className="text-white bg-[var(--primary)] p-[6px] rounded-2xl  w-[80px] h-[30px] text-center">{favs[index].genre}</p>
                     </div>
                     }
                 </div>

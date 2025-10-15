@@ -34,7 +34,7 @@ const Events =()=>{
             <section className="flex flex-col gap-[95px] items-center w-full p-[50px]">
 
                 {events.map((event, index) => (
-                    <div key={event.title} onMouseEnter={()=>handleHover(event.title)} onMouseLeave={()=>handleHover(null)} className={`flex w-full bg-black lg:h-[365px] lg:hover:h-[390px] h-[500px] hover:h-[550px]  transition-all duration-[300ms] ${index%2 === 1 ? 'flex-row' :'flex-row-reverse'}`}>
+                    <div key={event.title} onMouseEnter={()=>handleHover(event.title)} onMouseLeave={()=>handleHover(null)} className={`flex lg:flex-row flex-col w-full bg-black lg:h-[365px] lg:hover:h-[390px] h-auto hover:h-[550px]  transition-all duration-[300ms] ${index%2 === 1 ? 'flex-row' :'flex-row-reverse'}`}>
                         <div className="flex w-full">
                         <Card custom=" h-full transition-all duration-[300ms] " img={event.img} gray={hover && onHover !== event.title}/>
                         </div>

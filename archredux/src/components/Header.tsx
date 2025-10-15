@@ -36,10 +36,10 @@ const Header: React.FC<HeaderProps> = ({ location = "" }) => {
             className="flex flex-col cursor-pointer"
             onClick={() => navigate("/")}
           >
-            <div className="text-[24px] flex justify-center">Arch</div>
-            <div className="text-[36px] flex justify-center p-0 mt-[-14px]">
+            <h2 className="text-[24px] flex justify-center">Arch</h2>
+            <h1 className="text-[36px] flex justify-center p-0 mt-[-14px]">
               Arcades
-            </div>
+            </h1>
           </div>
         </article>
         <article className="flex w-full justify-end">

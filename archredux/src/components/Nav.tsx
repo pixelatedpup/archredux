@@ -29,28 +29,36 @@ const Nav = ({page = ""}) =>{
   <li onClick = {handleNav} className="flex justify-end w-full  h-full border-b">
     <div className={`transform transition-transform duration-300 delay-[200ms] ease-in-out hover:-translate-x-10 w-full h-full text-right hover:text-[var(--primary)] ${page=="/"?"text-[var(--primary)]":"text-white"}`}>
       <NavLink to="/">
+      <h1>
       Home
+      </h1>
       </NavLink>
     </div>
   </li>
   <li onClick = {handleNav} className="flex justify-end w-full border-b ">
     <div className={`transform transition-transform duration-300 ease-in-out hover:-translate-x-10 w-full h-full text-right hover:text-[var(--primary)] ${page=="/games"?"text-[var(--primary)]":page=="/"?"text-black ":"text-white"}`}>
       <NavLink to="/games">
+      <h1>
       Games
+      </h1>
       </NavLink>
     </div>
   </li>
   <li onClick = {handleNav} className="flex justify-end w-full border-b ">
     <div className={`transform transition-transform duration-300 ease-in-out hover:-translate-x-10 w-full h-full text-right hover:text-[var(--primary) ${page=="/events"?"text-[var(--primary)]":page=="/"?"text-black ":"text-white"}`}>
       <NavLink to="/events">
+      <h1>
       Events
+      </h1>
       </NavLink>
     </div>
   </li>
   <li onClick = {handleNav} className="flex justify-end w-full border-b ">
     <div className={`transform transition-transform duration-300 ease-in-out hover:-translate-x-10 w-full h-full text-right hover:text-[var(--primary)] ${page=="/scores"?"text-[var(--primary)]":page=="/"?"text-black ":"text-white"}`}>
       <NavLink to="/scores">
+      <h1>
       Scores
+      </h1>
       </NavLink>
     </div>
   </li>
