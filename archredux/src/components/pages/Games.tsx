@@ -42,7 +42,7 @@ const Games = () => {
               onClick={() => handleSelect(index)}
             >
 
-                <div className="w-full flex flex-col items-start">
+                <div className=" flex flex-col w-full h-full items-start justify-center ">
                   <div className="expand-sequential">
                     <Card img={favs[index].img} custom={` ${index === selectedCard?"h-[140px] w-[140px]":"h-[70px] w-[70px]"}  lg:h-[250px] lg:w-[250px]`} />
                   </div>
@@ -53,7 +53,7 @@ const Games = () => {
                     {index === selectedCard && 
                     <div className="flex flex-col gap-5 items-center justify-center ">
                     <p className="text-white w-full ">{favs[index].desc}</p> 
-                    <p className="text-white bg-[var(--primary)] p-[6px] rounded-2xl  w-[80px] h-[30px] text-center">{favs[index].genre}</p>
+                    <p className="flex justify-center items-center text-white bg-[var(--primary)] p-[6px] rounded-2xl  lg:w-[80px] lg:h-[30px] w-[45px] h-[15px] text-center">{favs[index].genre}</p>
                     </div>
                     }
                 </div>

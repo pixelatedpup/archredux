@@ -3,7 +3,7 @@ const Footer =()=>{
         <div className="bg-white">
             <article className="flex flex-col w-full justify-center h-[150px]">
                 <h2 className="flex w-full justify-center text-[24px]">Arch</h2>
-                <h1 className="flex w-full justify-center text-[48px] mt-[-30px]">Arcades</h1>
+                <h1 className="flex w-full justify-center text-[48px] mt-[-30px]">Redux</h1>
             </article>
             <article className="w-full flex justify-center">
                 <ul className="flex flex-row gap-4">

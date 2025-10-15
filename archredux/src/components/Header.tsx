@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ location = "" }) => {
           >
             <h2 className="text-[24px] flex justify-center">Arch</h2>
             <h1 className="text-[36px] flex justify-center p-0 mt-[-14px]">
-              Arcades
+              Redux
             </h1>
           </div>
         </article>

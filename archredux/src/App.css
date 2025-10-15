@@ -94,15 +94,28 @@ p{
   }
 }
 
-@keyframes expandHeight {
-  0% {
-    height: 0%;
+@keyframes fade-in {
+  0%{
+    opacity: 0%;
   }
-  100% {
-    height: 100%;
+  100%{
+    opacity: 100%;
   }
 }
 
+@keyframes expandHeight {
+  0% {
+    height: 0.5;
+  }
+  100% {
+    height: 1;
+  }
+}
+
+.fade-in{
+  opacity: 0;
+  animation: fade-in 0.6s ease-in-out 0.0s forwards;
+}
 /* Combined animation: width first, then height after 200ms */
 .expand-sequential {
   /* Start from the center */
@@ -121,3 +134,4 @@ p{
     expandWidth 0.5s ease-out forwards,
     expandHeight 0.5s ease-out 0.2s forwards; /* starts 200ms later */
 }
+
