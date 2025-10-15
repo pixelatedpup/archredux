@@ -82,19 +82,19 @@ const Home = () => {
 
                     </article>
                     <article className="flex w-full lg:justify-start justify-center lg:items-center">
-                        <div className="flex flex-col justify-center  rounded-2xl bg-[white] lg:h-[400px] lg:w-[650px] w-[450px] h-auto">
+                        <div className="flex flex-col justify-center  rounded-2xl bg-[white] lg:h-[350px] lg:w-[650px] w-[450px] h-auto">
                             
                             <div className="bg-[var(--primary)] p-[10px] rounded-t-2xl">
-                                <h2 className="text-[white]  lg:p-[20px] lg:px-[50px] lg:py-[30px] p-[10px] w-full text-center ">{events[selectedEvent].title}</h2>
+                                <h2 className="text-[white]  w-full text-center ">{events[selectedEvent].title}</h2>
                             </div>
                             
                             <div className="h-full p-[10px] w-full">
-                                <p className="text-[black]  lg:p-[20px] lg:px-[30px] p-[10px] lg:w-[600px] w-auto text-left">{events[selectedEvent].desc}</p>
+                                <h3 className="text-[black]  lg:p-[20px] lg:px-[30px] p-[10px] lg:w-[600px] w-auto text-left">{events[selectedEvent].desc}</h3>
                             </div>
 
                             <div className="flex  items-center justify-center lg:gap-7 gap-3 w-full h-full  p-[20px]">
                                 <div className="flex items-center bg-[var(--primary)] text-white p-[10px] rounded-xl lg:h-[40px] h-[30px]"><h3>Max: {events[selectedEvent].max}</h3></div>
-                                <button className="bg-black text-white p-[10px] rounded-2xl lg:w-[200px] lg:h-[50px] w-[130px] h-[40px]"><h3>Book Now</h3></button>
+                                <button className="flex items-center justify-center bg-black text-white p-[10px] rounded-2xl lg:w-[170px] lg:h-[45px] w-[130px] h-[40px]"><h3>Book Now</h3></button>
                             </div>
 
                         </div>

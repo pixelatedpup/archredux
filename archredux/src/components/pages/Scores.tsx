@@ -34,7 +34,7 @@ const Scores =()=>{
 
                                 
                 <section className="flex  w-full">
-                    <div className="grid grid-cols-6 w-[700px] h-[420px] border p-[20px] border-black border-[2px]">
+                    <div className="grid grid-cols-6 w-[700px] h-[420px] border p-[20px] border-[var(--darkg)] border-[1px] bg-[var(--lightg)] rounded-xl">
                         {favs.map((fav, index) => (
                                 <>
                                     <article key={index} onClick={()=>handleSelect(index)} className={`cursor-pointer h-[100px]`}>
