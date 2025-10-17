@@ -10,22 +10,22 @@ const Scores =()=>{
     }
     return(
         <>
-            <div className="flex lg:flex-row lg:justify-center flex-col  items-center mt-[120px] 
-                                = w-full p-[30px]   gap-5">
+            <div className="flex lg:flex-row lg:justify-center flex-col  items-center mt-[100px]
+                            w-full p-[30px]   gap-5">
 
                 <section className="flex w-full lg:justify-end justify-center">
-                    <div className=" flex lg:w-[680px] lg:h-[420px] w-[560px] h-[280px] bg-[black] border p-[20px]">
-                       <div className="flex w-full "> 
-                        <img className="w-[200px] h-[200px]" src={favs[selectedIndex].img}/>
+                    <div className=" flex lg:w-[680px] lg:h-[420px] w-[460px] h-[280px] bg-[black] border p-[20px]">
+                       <div className="flex w-full h-full  justify-center items-center"> 
+                        <img className="lg:w-[300px] lg:h-[300px] h-[200px] w-[200px]" src={favs[selectedIndex].img}/>
                         </div>
-                        <div className="flex flex-col gap-5 text-white  w-full  items-center pt-[40px]">
-                            <h2 className="text-[var(--primary)]">Leaderboard</h2>
-                            <ul className="flex flex-col w-full items-center ">
+                        <div className="flex flex-col gap-5 text-white  w-full  items-center justify-center ">
+                            <h2 className="text-[var(--light)]">Leaderboard</h2>
+                            <ul className="flex flex-col w-full items-center text-[var(--primary)] ">
 
-                                    <li><h3>1. {favs[selectedIndex].scores.first}</h3></li>
-                                    <li><h3>2. {favs[selectedIndex].scores.second}</h3></li>
-                                    <li><h3>3. {favs[selectedIndex].scores.third}</h3></li>
-                                    <li><h3>4. {favs[selectedIndex].scores.fourth}</h3></li>
+                                    <li><h2>1. {favs[selectedIndex].scores.first}</h2></li>
+                                    <li><h2>2. {favs[selectedIndex].scores.second}</h2></li>
+                                    <li><h2>3. {favs[selectedIndex].scores.third}</h2></li>
+                                    <li><h2>4. {favs[selectedIndex].scores.fourth}</h2></li>
 
                             </ul>
                         </div>  
@@ -34,7 +34,7 @@ const Scores =()=>{
 
                                 
                 <section className="flex lg:justify-start justify-center w-full">
-                    <div className="grid grid-cols-6 lg:w-[700px] lg:h-[420px] w-[560px] border p-[20px] border-[var(--darkg)] border-[1px] bg-[var(--lightg)] rounded-xl">
+                    <div className="grid lg:grid-cols-6 lg:w-[680px] lg:h-[420px] grid-cols-5 w-[460px] border p-[20px] border-[var(--darkg)] border-[1px] bg-[var(--lightg)] rounded-xl">
                         {favs.map((fav, index) => (
                                 <>
                                     <article key={index} onClick={()=>handleSelect(index)} className={`cursor-pointer h-[100px]`}>

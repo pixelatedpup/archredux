@@ -19,10 +19,10 @@ const Nav = ({page = ""}) =>{
     }
     return(
         <>
-            <section className="flex flex-col">
+            <section className="flex flex-col ">
                 <button onClick={handleNav} className="h-[45px] w-[45px] border border-[black] bg-white"><img src={NavImg}/></button>
                 {openNav && (
-                    <div className={`absolute mt-[45px] right-[21px] w-[216px] h-[320px] 
+                    <div className={`z-15 absolute mt-[45px] right-[21px] w-[216px] h-[320px] 
                                     ${page=="/"?"bg-[white] text-[black]": "bg-[black] text-[white]"} border border-[black]`}>
 
 <ul className="flex flex-col items-end text-[36px] gap-5 px-[10px] py-[20px] list-none decoration-none no-underline">

@@ -25,7 +25,7 @@ const Games = () => {
         trackMouse:true //allows desktop dragging too
   })
   return (
-    <div className="flex flex-col justify-center items-center w-full h-full mt-[100px]">
+    <div className="flex flex-col justify-center items-center w-full h-full mt-[150px]">
 
 
       {/* Game cards carousel */}
