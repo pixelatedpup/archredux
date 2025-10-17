@@ -36,7 +36,7 @@ const Events =()=>{
                 {events.map((event, index) => (
                     <div key={event.title} onMouseEnter={()=>handleHover(event.title)} onMouseLeave={()=>handleHover(null)} className={`flex lg:flex-row flex-col w-full bg-black lg:h-[365px] lg:hover:h-[390px] h-auto hover:h-[550px]  transition-all duration-[300ms] ${index%2 === 1 ? 'flex-row' :'flex-row-reverse'}`}>
                         <div className="flex w-full">
-                        <Card custom=" h-full transition-all duration-[300ms] " img={event.img} gray={hover && onHover !== event.title}/>
+                        <Card scrollPan = {true} custom=" h-full transition-all duration-[300ms] " img={event.img} gray={hover && onHover !== event.title}/>
                         </div>
                         <div className="flex flex-col p-[50px] gap-2 w-full">
                             <h2 className=" font-bold text-[var(--primary)]">{event.title}</h2>

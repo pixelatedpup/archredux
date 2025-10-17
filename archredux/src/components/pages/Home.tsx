@@ -103,20 +103,22 @@ const Home = () => {
             </section>
             
             {/* Games section */}
-            <section className="relative flex flex-col overflow-hidden mt-[100px] h-[789px] px-10 max-w-[100vw] ">
-                <div className="text-[white] text-[48px] mb-8">
+            <section className="relative flex flex-col overflow-hidden mt-[100px] h-[789px]  max-w-[100vw] ">
+                <div className="text-[white] text-[48px] mb-8 px-10">
                     <h1>Play some of our fan favourites</h1>
                 </div>
 
                 {/* Scrollable container */}
-                <div className="flex lg:h-[550px] h-[350px] animate-scroll-x lg:gap-[65px] gap-[5px] max-w-[100vw] ">
-                    {[...favs,...favs].map((fav, index) => (
-                    <div key={fav.id} className={`flex h-full ${index % 2 === 1? "justify-start flex-col-reverse" : "flex-col justify-start "}`} >
-                        <Card custom="lg:w-[250px] lg:h-[250px] w-[150px] h-[150px] border border-[var(--primary)]"img={fav.img}/>
-                        <div className="flex justify-center text-[var(--primary)] text-[36px] w-full "><h2>{fav.title}</h2></div>
+                <article className="scroll-container">
+                    <div className="flex lg:h-[550px] h-[350px] animate-scroll-x lg:gap-[65px] gap-[5px] max-w-[100vw] ">
+                        {[...favs,...favs].map((fav, index) => (
+                        <div key={fav.id} className={`flex h-full ${index % 2 === 1? "justify-start flex-col-reverse" : "flex-col justify-start "}`} >
+                            <Card custom="lg:w-[250px] lg:h-[250px] w-[150px] h-[150px] border border-[var(--primary)]"img={fav.img}/>
+                            <div className="flex justify-center text-[var(--primary)] text-[36px] w-full "><h2>{fav.title}</h2></div>
+                        </div>
+                        ))}
                     </div>
-                    ))}
-                </div>
+                </article>
             </section>
 
 
@@ -124,7 +126,9 @@ const Home = () => {
 
             {/* Reviews section */}
              <section className="w-full relative lg:mt-[100px] mt-[10px] ">
-                <div className="text-[white] text-[48px]"><h2>Check out our reviews</h2></div>
+                <div className="text-[white] text-[48px] mb-8 px-10">
+                    <h1>Check out our reviews</h1>
+                </div>
                 <div className="flex h-full gap-[120px] overflow-x-auto max-w-[100vw] ">
                     {reviews.map((review)=>(
                         <div key={review.name} className="flex flex-col  w-[318px]">

@@ -10,16 +10,17 @@ const Scores =()=>{
     }
     return(
         <>
-            <div className="flex lg:flex-row lg:justify-center flex-col  items-center mt-[100px]
-                            w-full p-[30px]   gap-5">
+            <div className="flex lg:flex-row lg:justify-center flex-col  sm:items-centermd:items-center mt-[150px]
+                            w-full  gap-5">
 
                 <section className="flex w-full lg:justify-end justify-center">
                     <div className=" flex lg:w-[680px] lg:h-[420px] w-[460px] h-[280px] bg-[black] border p-[20px]">
-                       <div className="flex w-full h-full  justify-center items-center"> 
+                       <div className="flex flex-col gap-2 w-full h-full  justify-center items-center"> 
                         <img className="lg:w-[300px] lg:h-[300px] h-[200px] w-[200px]" src={favs[selectedIndex].img}/>
+                        <h2 className="text-[var(--light)]">{favs[selectedIndex].title}</h2>
                         </div>
                         <div className="flex flex-col gap-5 text-white  w-full  items-center justify-center ">
-                            <h2 className="text-[var(--light)]">Leaderboard</h2>
+                            <h2 className="text-[var(--darkergb)]">Leaderboard</h2>
                             <ul className="flex flex-col w-full items-center text-[var(--primary)] ">
 
                                     <li><h2>1. {favs[selectedIndex].scores.first}</h2></li>

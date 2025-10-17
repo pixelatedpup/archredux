@@ -60,14 +60,7 @@ p{
     background-clip: text; 
 }
 
-@keyframes scroll-x{
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(-50%);
-    }
-}
+
 
 @keyframes expandIcon{
     0%{
@@ -78,9 +71,24 @@ p{
     }
 }
 
+@keyframes scroll-x{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
 .animate-scroll-x {
     animation: scroll-x 30s linear infinite;
+    display:flex;
     width: max-content;
+}
+
+.scroll-container {
+  overflow: hidden;
+  width: 100vw;
 }
 
 

@@ -14,7 +14,7 @@ const Page =()=>{
                 <Body/>
             </div>
             <div className="mb-0 border">
-            <Footer/>
+            <Footer location={location.pathname}/>
             </div>
         </div>
     );
